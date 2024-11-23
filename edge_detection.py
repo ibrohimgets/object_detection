@@ -2,7 +2,7 @@
 import cv2 as cv
 
 #load the image 
-img = cv.imread("images/group.jpeg")
+img = cv.imread("images/woman.jpeg")
 cv.imshow("Person", img)
 
 #color_to_BGR_and_show
@@ -11,7 +11,7 @@ cv.imshow("Person", gray)
 
 #bring_the_haar
 haar_cascade = cv.CascadeClassifier("face.xml")
-faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=3)
+faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
 print(f"Number of faces that found in picture is {len(faces_rect)}")
 
 
